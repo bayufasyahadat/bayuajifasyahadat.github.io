@@ -43,7 +43,7 @@
     "events": "1.1.1",
     "joi": "^14.0.1",
     "jsftp": "2.0.0",
-    "jsonwebtoken": "^8.3.0",
+    "jsonwebtoken": "^9.0.0",
     "mongodb": "^3.1.10",
     "mysql": "^2.15.0",
     "nodemon": "^1.19.0",
