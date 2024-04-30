@@ -1,0 +1,264 @@
+/* font-face */
+@font-face {
+  font-family: "MadeOuterSans";
+  src: url("font/made_outer_sans/MADE_Outer_Sans_Regular.otf")
+    format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MadeOuterSans-bold";
+  src: url("font/made_outer_sans/made_outer_sans_black.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "MadeOuterSans";
+  background-color: #f8f9fa;
+  color: #1a202c; /* Set text color for all sections */
+}
+.navbar {
+  background-color: rgba(0, 0, 0, 0.075) !important;
+}
+.navbar-brand,
+.navbar-nav .nav-link {
+  color: #fff !important;
+}
+/* .hero-section {
+  background-color: #8c8c8c;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+} */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.hero-section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Set the video width to cover the entire hero section */
+  height: 100%; /* Set the video height to cover the entire hero section */
+  object-fit: cover;
+}
+
+.hero-section .container {
+  position: absolute;
+  top: 50%; /* Place the container at 50% from the top */
+  left: 0;
+  right: 0;
+  transform: translateY(
+    -50%
+  ); /* Move the container up by 50% of its own height */
+  margin: auto; /* Center the container horizontally */
+  padding: 20px;
+}
+
+.hero-section h1 {
+  font-family: "MadeOuterSans-bold";
+  font-size: 2.1rem;
+  margin-bottom: 20px;
+}
+
+.section-image {
+  text-align: -webkit-center;
+}
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+}
+
+.img-thumbnail {
+  background-color: #1a202c;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .img-thumbnail {
+    display: none;
+  }
+}
+
+/* Custom CSS for the portfolio */
+.zoom-effect {
+  transition: transform 0.3s;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.05);
+}
+
+.tech-stack {
+  margin-top: 10px;
+}
+
+.tech-icon {
+  margin-right: 5px;
+}
+
+.porto-img {
+  height: 300px;
+}
+
+/* experience */
+/* Custom CSS for the experience section */
+#experience {
+  text-align: center;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background-color: #1a202c; /* Line color */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: auto;
+}
+
+.timeline-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 6px);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #1a202c; /* Dot color */
+  z-index: 2;
+}
+
+.timeline-content {
+  position: relative;
+  background-color: #f7f7f7; /* Background color of timeline items */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.timeline-item:last-child .timeline-content {
+  margin-bottom: 0;
+}
+
+.company-logo {
+  width: 100px; /* Adjust the size of the logo as needed */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Contact information styles */
+#contact h2 {
+  margin-bottom: 20px; /* Add space below the heading */
+}
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Add space above the contact info */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-info {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    text-align: center; /* Center align text on smaller screens */
+  }
+
+  .contact-item {
+    margin-right: 0; /* Remove margin between items on smaller screens */
+    margin-bottom: 20px; /* Add space between items on smaller screens */
+  }
+}
+
+.contact-item {
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item i {
+  font-size: 36px;
+  color: #1a202c;
+}
+
+.contact-item p {
+  font-size: 18px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item:hover p {
+  color: #007bff; /* Change color on hover */
+}
+
+/* Loading screen styles */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #1a202c; /* Loading spinner color */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
